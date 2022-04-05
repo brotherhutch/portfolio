@@ -14,6 +14,111 @@
   font-style: italic;
 }
 
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+
+  --font-color: #333333;
+  --bg-color-about: #eedbdb;
+  --bg-color-projects: #cecbcb;
+  --bg-color-skills: #cbdadb ;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  color: var(--font-color);
+}
+
 body {
   font-family: mulish, Sans;
+  margin: 0;
+  padding: 0 var(--spacing-3);
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+}
+
+header .header-left {
+  height: 100px;
+  flex-grow: 1;
+
+}
+
+header .header-right {
+  margin-left: 2%;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin-left: 10px;
+}
+
+header .main-title {
+  margin: 0;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* START Masonry-like Grid https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic */
+main {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: space-between;
+  height: 100%;
+}
+
+main article {
+  width: 32%;
+  margin-bottom: 2%; /* (100-32*3)/2 */
+  border-radius: 10px;
+  padding: 0 var(--spacing-2);
+}
+
+/* Re-order items into rows */
+article:nth-child(3n+1) { order: 1; }
+article:nth-child(3n+2) { order: 2; }
+article:nth-child(3n)   { order: 3; }
+
+/* Force new columns */
+main::before,
+main::after {
+  content: "";
+  flex-basis: 100%;
+  width: 0;
+  order: 2;
+}
+/* END Masonry-like Grid */
+
+.about {
+  background-color: var(--bg-color-about);
+}
+
+.projects {
+  background-color: var(--bg-color-projects);
+}
+
+.skills {
+  background-color: var(--bg-color-skills);
 }
