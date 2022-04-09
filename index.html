@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mark Hutchison - Portfolio</title>
 
-  <link href="./sanitize.css" rel="stylesheet" />
-  <link href="./styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/sanitize.css">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
   <header>
@@ -28,17 +29,60 @@
   <main>
     <article data-tag="about" class="about">
       <h2>About Me</h2>
+      <figure>
+        <img src="/assets/hs-square.jpg" alt="Mark Hutchison Photo">
+        <figcaption>Mark Hutchison</figcaption>
+      </figure>
+      <p>Greegings! I work as an Ecommerce specialist in the marine industry. I am a big fan of continuing education, so am always working to expand my skillset. The information here represents part of that mission.</p>
     </article>
     <article data-tag="projects" class="projects">
-      <h2>Portfolio</h2>
-      <h3>Codecademy Project</h3>
+      <hgroup>
+        <h2>Portfolio</h2>
+        <h3>Codecademy Project</h3>
+      </hgroup>
+      <figure>
+        <img src="/assets/personal-portfolio-website-scree.png" alt="Portfolio Example">
+        <figcaption>Codecademy's Example Page</figcaption>
+      </figure>
+      <p>This is Codecademy's Full Stack course starter portfolio prodject, and is the impetus for this site.</p>
     </article>
     <article data-tag="skills" class="skills">
-      <h2>Skills</h2>
+      <hgroup>
+        <h2>Skills</h2>
+        <h3>Code</h3>
+      </hgroup>
+      <p class="skills-container">
+        <i class="fa-brands fa-html5" title="html5"></i>
+        <i class="fa-brands fa-js-square" title="javascript"></i>
+        <i class="fa-brands fa-css3-alt" title="css"></i>
+        <i class="fa-solid fa-hashtag" title="csharp"></i>
+        <i class="fa-brands fa-php" title="php"></i>
+        <i class="fa-brands fa-java" title="java"></i>
+        <i class="fa-brands fa-shopify" title="shopify+liquid"></i>
+        <i class="fa-brands fa-magento" title="magento"></i>
+        <i class="fa-brands fa-python" title="python+django"></i>
+        <i class="fa-brands fa-aws" title="amazon web services"></i>
+        <i class="fa-brands fa-git" title="git"></i>
+        <i class="fa-brands fa-node" title="nodejs"></i>
+        <i class="fa-brands fa-github" title="github"></i>
+        <i class="fa-solid fa-square-terminal" title="terminal"></i>
+      </p>
     </article>
     <article data-tag="projects" class="projects">
       <h2>Pet Weight</h2>
       <h3>Python/Django Project</h3>
+      <figure>
+        <img src="/assets/doggo-weight.jpg" alt="Dog on a weight scale">
+        <figcaption>Pet Weight Tracking</figcaption>
+      </figure>
+      <p>I started this project to practice with Django and create an app that would actually be useful for tracking the weights of our many, MANY pets.</p>
+    </article>
+    <article data-tag="skills" class="skills">
+      <hgroup>
+        <h2>Skills</h2>
+        <h3>Productivity</h3>
+      </hgroup>
+      <p>e.g. Office 365, etc.</p>
     </article>
   </main>
   <footer>

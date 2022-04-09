@@ -1,16 +1,16 @@
 @font-face {
   font-family: mulish;
-  src: url(./Mulish-Regular.ttf);
+  src: url(../webfonts/Mulish-Regular.ttf);
   font-weight: normal;
 }
 @font-face {
   font-family: mulish;
-  src: url(./Mulish-Bold.ttf);
+  src: url(../webfonts/Mulish-Bold.ttf);
   font-weight: bold;
 }
 @font-face {
   font-family: mulish;
-  src: url(./Mulish-Italic.ttf);
+  src: url(../webfonts/Mulish-Italic.ttf);
   font-style: italic;
 }
 
@@ -21,6 +21,11 @@
   --spacing-4: 24px;
 
   --font-color: #333333;
+  --font-size-regular: 16px;
+  --font-size-small: 14px;
+  --font-size-large: 18px;
+  --font-size-huge: 28px;
+
   --bg-color-about: #eedbdb;
   --bg-color-projects: #cecbcb;
   --bg-color-skills: #cbdadb ;
@@ -31,12 +36,12 @@ html {
 }
 
 html, body {
-  height: 100%;
   color: var(--font-color);
 }
 
 body {
   font-family: mulish, Sans;
+  font-size: var(--font-size-regular);
   margin: 0;
   padding: 0 var(--spacing-3);
   max-width: 1200px;
@@ -52,7 +57,6 @@ header {
 header .header-left {
   height: 100px;
   flex-grow: 1;
-
 }
 
 header .header-right {
@@ -86,7 +90,7 @@ main {
   display: flex;
   flex-flow: column wrap;
   align-content: space-between;
-  height: 100%;
+  height: 1100px; /* must be a fixed height, taller than tallest column of content for css "masonry" to work */
 }
 
 main article {
@@ -94,6 +98,25 @@ main article {
   margin-bottom: 2%; /* (100-32*3)/2 */
   border-radius: 10px;
   padding: 0 var(--spacing-2);
+}
+
+main article figure img {
+  width: 100%;
+}
+
+main article figure figcaption {
+  font-size: var(--font-size-small);
+  font-style: italic;
+}
+
+main article .skills-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 12px;
+}
+
+main article i {
+  font-size: var(--font-size-huge);
 }
 
 /* Re-order items into rows */
