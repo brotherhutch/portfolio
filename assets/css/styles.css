@@ -26,9 +26,11 @@
   --font-size-large: 18px;
   --font-size-huge: 28px;
 
+  --bg-color-home: #f5deb3;
   --bg-color-about: #eedbdb;
   --bg-color-projects: #cecbcb;
-  --bg-color-skills: #cbdadb ;
+  --bg-color-skills: #cbdadb;
+  --bg-color-contact: #d3c8b8;
 }
 
 html {
@@ -70,6 +72,43 @@ header nav ul {
 
 header nav ul li {
   margin-left: 10px;
+}
+
+header nav ul li a {
+  color: var(--font-color);
+  text-decoration: none;
+  padding: 0 5px 5px 5px;
+  background-size: 0% 0.2em;
+  background-position-y: 100%;
+  background-position-x: 0%, 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus,
+header nav ul li a:active {
+background-size: 100% 0.2em;
+}
+
+header nav ul li a.home-link {
+  background-image: linear-gradient(var(--bg-color-home), var(--bg-color-home)), linear-gradient(var(--bg-color-home), var(--bg-color-home));
+}
+
+header nav ul li a.about-link {
+  background-image: linear-gradient(var(--bg-color-about), var(--bg-color-about)), linear-gradient(var(--bg-color-about), var(--bg-color-about));
+}
+
+header nav ul li a.projects-link {
+  background-image: linear-gradient(var(--bg-color-projects), var(--bg-color-projects)), linear-gradient(var(--bg-color-projects), var(--bg-color-projects));
+}
+
+header nav ul li a.skills-link {
+  background-image: linear-gradient(var(--bg-color-skills), var(--bg-color-skills)), linear-gradient(var(--bg-color-skills), var(--bg-color-skills));
+}
+
+header nav ul li a.contact-link {
+  background-image: linear-gradient(var(--bg-color-contact), var(--bg-color-contact)), linear-gradient(var(--bg-color-contact), var(--bg-color-contact));
 }
 
 header .main-title {

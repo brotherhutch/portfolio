@@ -18,15 +18,16 @@
     <div class="header-right">
       <nav>
         <ul>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contact</li>
+          <li><a href="#" class="home-link">Home</a></li>
+          <li><a href="#" class="about-link">About</a></li>
+          <li><a href="#" class="projects-link">Projects</a></li>
+          <li><a href="#" class="skills-link">Skills</a></li>
+          <li><a href="#" class="contact-link">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main>
+  <main class="articles-active">
     <article data-tag="about" class="about">
       <h2>About Me</h2>
       <figure>
@@ -45,6 +46,7 @@
         <figcaption>Codecademy's Example Page</figcaption>
       </figure>
       <p>This is Codecademy's Full Stack course starter portfolio prodject, and is the impetus for this site.</p>
+      <p>Technologies used include HTML, CSS, and JS</p>
     </article>
     <article data-tag="skills" class="skills">
       <hgroup>
@@ -82,9 +84,31 @@
         <h2>Skills</h2>
         <h3>Productivity</h3>
       </hgroup>
-      <p>e.g. Office 365, etc.</p>
+      <ul>
+        <li>MS Office 365</li>
+        <li>Adobe Photoshop, Illustrator, Premier</li>
+        <li>Google Workspace</li>
+      </ul>
+    </article>
+    <article data-tag="skills" class="skills">
+      <hgroup>
+        <h2>Skills</h2>
+        <h3>Ecommerce</h3>
+      </hgroup>
+      <ul>
+        <li>Linnworks</li>
+        <li>Shopify</li>
+        <li>Amazon Seller/Vendor/AWS</li>
+        <li>Ebay</li>
+        <li>Walmart Seller</li>
+        <li>Zendesk</li>
+      </ul>
     </article>
   </main>
+  <div class="articles-inactive">
+    <!-- Here we'll put the articles not selected when the nav is used, use js to swap articles in/out -->
+
+  </div>
   <footer>
     <p>Contact</p>
     <p>@: mark.d.hutchison, gmail</p>
