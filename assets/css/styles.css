@@ -184,3 +184,7 @@ main::after {
 .skills {
   background-color: var(--bg-color-skills);
 }
+
+.articles-inactive {
+  display: none;
+}

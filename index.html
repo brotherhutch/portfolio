@@ -19,16 +19,15 @@
     <div class="header-right">
       <nav id="main-nav">
         <ul>
-          <li><a href="#" id="home" class="home-link">Home</a></li>
+          <li><a href="/" id="home" class="home-link">Home</a></li>
           <li><a href="#" id="about" class="about-link">About</a></li>
           <li><a href="#" id="projects" class="projects-link">Projects</a></li>
           <li><a href="#" id="skills" class="skills-link">Skills</a></li>
-          <li><a href="#" id="contact" class="contact-link">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <main class="articles-active">
+  <main class="articles-active" id="articles-active">
     <article data-tag="about" class="about">
       <h2>About Me</h2>
       <figure>
@@ -105,10 +104,10 @@
         <li>Zendesk</li>
       </ul>
     </article>
+    <article data-tag="masonry"></article>
   </main>
-  <div class="articles-inactive">
+  <div class="articles-inactive" id="articles-inactive">
     <!-- Here we'll put the articles not selected when the nav is used, use js to swap articles in/out -->
-
   </div>
   <footer>
     <p>Contact</p>
