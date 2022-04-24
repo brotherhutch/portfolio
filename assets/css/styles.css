@@ -21,10 +21,12 @@
   --spacing-4: 24px;
 
   --font-color: #333333;
-  --font-size-regular: 16px;
+  
   --font-size-small: 14px;
+  --font-size-regular: 16px;
   --font-size-large: 18px;
   --font-size-huge: 28px;
+  --font-size-colossal: 34px;
 
   --bg-color-home: #f5deb3;
   --bg-color-about: #eedbdb;
@@ -57,12 +59,16 @@ header {
 }
 
 header .header-left {
-  height: 100px;
+  padding-bottom: 4%;
   flex-grow: 1;
 }
 
 header .header-right {
   margin-left: 2%;
+}
+
+header nav {
+  display: none;
 }
 
 header nav ul {
@@ -113,6 +119,7 @@ header nav ul li a.contact-link {
 
 header .main-title {
   margin: 0;
+  font-size: var(--font-size-huge);
 }
 
 footer {
@@ -123,55 +130,6 @@ footer {
 footer p {
   margin: 0;
 }
-
-/* START Masonry-like Grid https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic */
-main {
-  display: flex;
-  flex-flow: column wrap;
-  align-content: space-between;
-  height: 1100px; /* must be a fixed height, taller than tallest column of content for css "masonry" to work */
-}
-
-main article {
-  width: 32%;
-  margin-bottom: 2%; /* (100-32*3)/2 */
-  border-radius: 10px;
-  padding: 0 var(--spacing-2);
-}
-
-main article figure img {
-  width: 100%;
-}
-
-main article figure figcaption {
-  font-size: var(--font-size-small);
-  font-style: italic;
-}
-
-main article .skills-container {
-  display: flex;
-  flex-flow: row wrap;
-  gap: 12px;
-}
-
-main article i {
-  font-size: var(--font-size-huge);
-}
-
-/* Re-order items into rows */
-article:nth-child(3n+1) { order: 1; }
-article:nth-child(3n+2) { order: 2; }
-article:nth-child(3n)   { order: 3; }
-
-/* Force new columns */
-main::before,
-main::after {
-  content: "";
-  flex-basis: 100%;
-  width: 0;
-  order: 2;
-}
-/* END Masonry-like Grid */
 
 .about {
   background-color: var(--bg-color-about);
@@ -185,6 +143,88 @@ main::after {
   background-color: var(--bg-color-skills);
 }
 
-.articles-inactive {
-  display: none;
+main {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-large);
+}
+
+main article {
+  width: 100%;
+  margin-bottom: 4%;
+  border-radius: 10px;
+  padding: 0 var(--spacing-2);
+}
+
+main article figure img {
+  width: 100%;
+}
+
+main article figure figcaption {
+  font-size: var(--font-size-regular);
+  font-style: italic;
+}
+
+main article .skills-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 12px;
+}
+
+main article i {
+  font-size: var(--font-size-colossal);
+}
+
+@media only screen and (min-width: 768px) {
+  header .header-left {
+    height: 100px;
+    padding-bottom: 0;
+  }
+
+  header nav {
+    display: block;
+  }
+  /* START Masonry-like Grid https://tobiasahlin.com/blog/common-flexbox-patterns/#masonry-or-mosaic */
+  main {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    font-size: var(--font-size-regular);
+    height: 1100px; /* must be a fixed height, taller than tallest column of content for css "masonry" to work */
+  }
+
+  main article {
+    width: 32%;
+    margin-bottom: 2%; /* (100-32*3)/2 */
+    border-radius: 10px;
+    padding: 0 var(--spacing-2);
+  }
+
+  main article figure figcaption {
+    font-size: var(--font-size-small);
+    font-style: italic;
+  }
+
+  main article i {
+    font-size: var(--font-size-huge);
+  }
+
+  /* Re-order items into rows */
+  article:nth-child(3n+1) { order: 1; }
+  article:nth-child(3n+2) { order: 2; }
+  article:nth-child(3n)   { order: 3; }
+
+  /* Force new columns */
+  main::before,
+  main::after {
+    content: "";
+    flex-basis: 100%;
+    width: 0;
+    order: 2;
+  }
+
+  .articles-inactive {
+    display: none;
+  }
+  /* END Masonry-like Grid */
 }
